@@ -89,5 +89,9 @@ js: js
 images: images
 
 # Theme version
+<<<<<<< HEAD
 version: 0.4.4
 
+=======
+version: 0.4.5.1
+>>>>>>> 7ccd657385e22897de6e186d5de123aaf197aeb6
