@@ -44,6 +44,11 @@ icon_font: default
 #icon_font: feather
 #icon_font: linecons
 
+# Code Highlight theme
+# Available value: normal | night | night eighties | night blue | night bright
+# https://github.com/chriskempson/tomorrow-theme
+highlight_theme: normal
+
 # Custom Logo.
 # !!Only available for Default Scheme currently.
 # Options:
