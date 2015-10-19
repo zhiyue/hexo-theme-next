@@ -29,11 +29,11 @@
 
         {% if page.comments %}
           <div class="comments" id="comments">
-            {% if (config.duoshuo and config.duoshuo.shortname) or config.duoshuo_shortname %}
+            {% if (theme.duoshuo and theme.duoshuo.shortname) or theme.duoshuo_shortname %}
               <div class="ds-thread" data-thread-key="{{ page.path }}"
                    data-title="{{ page.title }}" data-url="{{ page.permalink }}">
               </div>
-            {% elseif config.disqus_shortname %}
+            {% elseif theme.disqus_shortname %}
               <div id="disqus_thread">
                 <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
               </div>
@@ -42,7 +42,9 @@
         {% endif %}
       </div>
 
-      {% block sidebar %}{% endblock %}
+      {% if theme.sidebar !== 'remove' %}
+        {% block sidebar %}{% endblock %}
+      {% endif %}
     </main>
 
     <footer id="footer" class="footer">
@@ -77,9 +79,12 @@
       if (isMobile()) {
         FastClick.attach(document.body);
       }
+
+      motionIntegrator.bootstrap();
     });
   </script>
 
+  {% include '_scripts/tinysou.swig' %}
   {% include '_scripts/mathjax.swig' %}
   {% block comment_system %}{% endblock %}
   {% include '_scripts/baidushare.swig' %}
