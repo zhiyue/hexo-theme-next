@@ -23,7 +23,6 @@ menu_icons:
   archives: archive
   commonweal: heartbeat
 
-language: zh-Hans
 
 # Place your favicon.ico to /source directory.
 favicon: /favicon.ico
